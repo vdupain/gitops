@@ -8,4 +8,4 @@ spec:
   interval: 1m0s
   ref:
     branch: main
-  url: https://github.com/vdupain/gitops-apps.git
+  url: https://github.com/vdupain/gitops-k8s-apps.git

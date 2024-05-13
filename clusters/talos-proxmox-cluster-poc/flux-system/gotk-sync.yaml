@@ -20,7 +20,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./clusters/talos-proxmox-cluster-poc
+  path: ./clusters/talos-proxmox-cluster
   prune: true
   sourceRef:
     kind: GitRepository

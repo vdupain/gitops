@@ -12,5 +12,5 @@ spec:
     kind: GitRepository
     name: gitops-k8s-infra
   dependsOn:
-    - name: network
+    - name: gitops-k8s-infra-network
   

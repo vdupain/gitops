@@ -7,5 +7,5 @@ metadata:
 spec:
   interval: 1m0s
   ref:
-    branch: main
+    branch: testing
   url: https://github.com/vdupain/gitops-k8s-infra.git

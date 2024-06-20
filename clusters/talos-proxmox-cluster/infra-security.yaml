@@ -2,11 +2,11 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: k8s-infra-sealed-secrets
+  name: k8s-infra-security
   namespace: flux-system
 spec:
   interval: 1m0s
-  path: ./flux/sealed-secrets
+  path: ./flux/security
   prune: true
   sourceRef:
     kind: GitRepository

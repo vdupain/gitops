@@ -9,3 +9,8 @@ spec:
   ref:
     branch: main
   url: https://github.com/vdupain/gitops-k8s-infra.git
+  ignore: |
+    # exclude all
+    /*
+    # include deploy dir
+    !/flux

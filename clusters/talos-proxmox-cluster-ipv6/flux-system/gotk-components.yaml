@@ -4509,6 +4509,10 @@ metadata:
   name: source-controller
   namespace: flux-system
 spec:
+  ipFamilies:
+  - IPv6
+  - IPv4
+  ipFamilyPolicy: PreferDualStack
   ports:
   - name: http
     port: 80

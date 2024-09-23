@@ -20,7 +20,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./clusters/talos-proxmox-cluster
+  path: ./clusters/talos-proxmox-cluster-pve3-gpu
   prune: true
   sourceRef:
     kind: GitRepository

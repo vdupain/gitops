@@ -10,4 +10,4 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: k8s-testing
+    name: k8s-infra

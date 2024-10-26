@@ -36,7 +36,7 @@ spec:
   values:
     deployment:
       kind: Deployment
-      replicas: 2
+      replicas: 1
     providers:
       kubernetesIngress:
         publishedService:

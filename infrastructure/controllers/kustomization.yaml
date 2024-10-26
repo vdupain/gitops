@@ -7,3 +7,4 @@ resources:
   - cert-manager.yaml
   - ingress-nginx.yaml
   - ingress-traefik.yaml
+  - local-path-storage.yaml

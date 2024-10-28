@@ -8,3 +8,4 @@ resources:
   - ingress-nginx.yaml
   - ingress-traefik.yaml
   - local-path-storage.yaml
+  - sealed-secrets.yaml

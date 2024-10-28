@@ -28,7 +28,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./apps/cluster-gpu/open-webui
+  path: ./apps/cluster-gpu/ollama
   prune: true
   wait: true
   timeout: 5m0s

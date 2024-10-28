@@ -10,6 +10,7 @@ spec:
   prune: true
   dependsOn:
     - name: k8s-infra-nvidia
+    - name: k8s-infra-network
   sourceRef:
     kind: GitRepository
     name: k8s-apps

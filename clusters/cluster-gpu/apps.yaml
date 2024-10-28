@@ -1,7 +1,8 @@
+---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: apps
+  name: apps-nvidia
   namespace: flux-system
 spec:
   interval: 10m0s
@@ -10,7 +11,24 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./apps/cluster-gpu
+  path: ./apps/cluster-gpu/nvidia
+  prune: true
+  wait: true
+  timeout: 5m0s
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: apps
+  namespace: flux-system
+spec:
+  interval: 10m0s
+  dependsOn:
+    - name: apps-nvidia
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./apps/cluster-gpu/open-webui
   prune: true
   wait: true
   timeout: 5m0s

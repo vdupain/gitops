@@ -17,10 +17,10 @@ spec:
   patches:
     - patch: |
         - op: replace
-          path: /spec/blocks/start
+          path: /spec/blocks/0/start
           value: 192.168.10.215
         - op: replace
-          path: /spec/blocks/stop
+          path: /spec/blocks/0/stop
           value: 192.168.10.219
       target:
         kind: CiliumLoadBalancerIPPool

@@ -6,7 +6,6 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1h0s
-  type: oci
   url: https://flux-iac.github.io/tofu-controller/
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta2

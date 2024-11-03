@@ -9,3 +9,14 @@ spec:
   url: https://github.com/vdupain/gitops-iac
   ref:
     branch: main
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: terraform-proxmox-talos-k8s-cluster
+  namespace: flux-system
+spec:
+  interval: 30s
+  url: https://github.com/vdupain/terraform-proxmox-talos-k8s-cluster
+  ref:
+    branch: main

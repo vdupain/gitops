@@ -20,7 +20,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./clusters/cluster-demo
+  path: ./clusters/tf-cluster
   prune: true
   sourceRef:
     kind: GitRepository

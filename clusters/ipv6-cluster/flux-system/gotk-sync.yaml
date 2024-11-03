@@ -20,7 +20,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./clusters/cluster-gpu
+  path: ./clusters/ipv6-cluster
   prune: true
   sourceRef:
     kind: GitRepository

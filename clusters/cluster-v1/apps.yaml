@@ -10,7 +10,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./apps/cluster-v1
+  path: ./apps/clusters/cluster-v1
   prune: true
   wait: true
   timeout: 5m0s

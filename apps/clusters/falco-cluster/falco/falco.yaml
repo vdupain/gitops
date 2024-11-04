@@ -5,8 +5,6 @@ metadata:
   name: falco
   labels:
     vector.dev/exclude: "true"
-    # https://www.talos.dev/v1.7/kubernetes-guides/configuration/pod-security/
-    pod-security.kubernetes.io/enforce: privileged
 ---
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository

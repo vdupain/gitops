@@ -15,6 +15,8 @@ data:
             name: falco-rules
 
     driver:
+    # https://github.com/falcosecurity/falco/issues/3323
+    # modern_ebpf don't work with Talos 1.8.x/k8s 1.31.1
       kind: ebpf
       # kind: modern_ebpf
     tty: true

@@ -6,5 +6,5 @@ resources:
   - falco.values.configmap.yaml
   - custom-rules.configmap.yaml
   - fluent.yaml
-  - fluent.values.configmap
+  - fluent.values.configmap.yaml
   - vector-falcosidekick.helmrelease.yaml

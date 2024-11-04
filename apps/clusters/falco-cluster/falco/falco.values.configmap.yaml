@@ -15,7 +15,8 @@ data:
             name: falco-rules
 
     driver:
-      kind: modern_ebpf
+      kind: ebpf
+      # kind: modern_ebpf
     tty: true
 
     falcosidekick:

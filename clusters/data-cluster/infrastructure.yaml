@@ -82,4 +82,3 @@ spec:
     name: flux-system
   path: ./infrastructure/configs
   prune: true
-  

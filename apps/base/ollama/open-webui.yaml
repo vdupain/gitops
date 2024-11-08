@@ -40,7 +40,8 @@ spec:
         type: 'nvidia'
         number: 1
       # -- List of models to pull at container startup
-      models: 
+      models:
+        - mistral
         - llama3
       persistentVolume:
         enabled: true

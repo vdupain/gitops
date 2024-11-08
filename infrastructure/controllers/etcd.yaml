@@ -12,7 +12,7 @@ metadata:
   name: etcd
   namespace: flux-system
 spec:
-  interval: 15m
+  interval: 24h
   type: oci
   url: oci://registry-1.docker.io/bitnamicharts
 ---  
@@ -22,6 +22,7 @@ metadata:
   name: etcd
   namespace: etcd
 spec:
+  interval: 30m
   chart:
     spec:
       chart: etcd
@@ -30,8 +31,7 @@ spec:
         kind: HelmRepository
         name: etcd
         namespace: flux-system
-  interval: 15m
-  timeout: 5m
+      interval: 12h
   releaseName: etcd
 
   values:

@@ -4,7 +4,7 @@ metadata:
   name: podinfo
   namespace: podinfo
 spec:
-  releaseName: podinfo
+  interval: 30m
   chart:
     spec:
       chart: podinfo
@@ -12,7 +12,8 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: podinfo
-  interval: 50m
+      interval: 12h
+  releaseName: podinfo
 
   values:
     ingress:

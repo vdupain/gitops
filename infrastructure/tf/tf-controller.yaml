@@ -5,7 +5,7 @@ metadata:
   name: tf-controller
   namespace: flux-system
 spec:
-  interval: 1h0s
+  interval: 24h
   type: oci
   url: oci://ghcr.io/flux-iac/charts
 ---
@@ -15,6 +15,7 @@ metadata:
   name: tf-controller
   namespace: flux-system
 spec:
+  interval: 30m
   chart:
     spec:
       chart: tf-controller
@@ -22,7 +23,7 @@ spec:
         kind: HelmRepository
         name: tf-controller
       version: '0.16.0-rc.4'
-  interval: 1h0s
+      interval: 12h
   releaseName: tf-controller
   targetNamespace: flux-system
   install:

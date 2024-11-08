@@ -29,3 +29,8 @@ spec:
         name: kubedoom
         namespace: flux-system
       interval: 12h
+
+  values:
+    kubedoom:
+      mode: "pods"
+      namespace: "kubedoom"

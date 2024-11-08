@@ -31,5 +31,16 @@ spec:
       interval: 12h
 
   values:
+    ollama:
+      gpu:
+        enabled: true
+        type: 'nvidia'
+        number: 1
+      # -- List of models to pull at container startup
+      models: 
+        - llama2
+      persistentVolume:
+        enabled: true
+
 
 

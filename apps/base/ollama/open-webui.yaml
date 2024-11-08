@@ -42,8 +42,7 @@ spec:
         number: 1
       # -- List of models to pull at container startup
       models:
-        - mistral
-        - llama3
+        - llama3.2
       persistentVolume:
         enabled: true
 

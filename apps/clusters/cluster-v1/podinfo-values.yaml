@@ -12,9 +12,15 @@ spec:
   values:
     ingress:
       annotations:
+        #traefik.ingress.kubernetes.io/router.entrypoints: websecure
+        #traefik.ingress.kubernetes.io/router.tls: "true"
         cert-manager.io/cluster-issuer: le-prod
       hosts:
         - host: podinfo.k8s.vincentdupain.com
           paths:
             - path: /
               pathType: ImplementationSpecific
+      tls:
+        - secretName: podinfo-service-cert
+          hosts:
+            - podinfo.k8s.vincentdupain.com

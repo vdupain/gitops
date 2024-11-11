@@ -12,7 +12,7 @@ spec:
   values:
     ingress:
       hosts:
-        - host: podinfo.k8s
+        - host: podinfo.k8s.vincentdupain.com
           paths:
             - path: /
               pathType: ImplementationSpecific

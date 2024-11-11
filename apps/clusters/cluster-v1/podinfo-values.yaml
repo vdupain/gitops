@@ -11,6 +11,8 @@ spec:
     enable: false
   values:
     ingress:
+      annotations:
+        cert-manager.io/cluster-issuer: le-prod
       hosts:
         - host: podinfo.k8s.vincentdupain.com
           paths:

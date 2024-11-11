@@ -23,17 +23,17 @@ spec:
         - name: PROXMOX_VE_SSH_USERNAME
           valueFrom:
             secretKeyRef:
-              name: proxmox-pve1-secrets
+              name: proxmox-pve1-credentials
               key: ssh_username
         - name: PROXMOX_VE_SSH_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: proxmox-pve1-secrets
+              name: proxmox-pve1-credentials
               key: ssh_password
         - name: PROXMOX_VE_API_TOKEN
           valueFrom:
             secretKeyRef:
-              name: proxmox-pve1-secrets
+              name: proxmox-pve1-credentials
               key: api_token  
   vars:
   - name: proxmox

@@ -9,4 +9,6 @@ resources:
 #- ingress-nginx.yaml
 - ingress-traefik.yaml
 - local-path-storage.yaml
+- ovh-credentials.sealedsecret.yaml
 - sealed-secrets.yaml
+- sealed-secrets-web.yaml

@@ -29,40 +29,40 @@ spec:
   values:
     configVersion: 0.0.1
     groupName: acme.vincentdupain.com
-    # issuers:
-    #   - name: le-prod
-    #     create: true
-    #     kind: ClusterIssuer
-    #     namespace: default
-    #     cnameStrategy: None
-    #     acmeServerUrl: https://acme-v02.api.letsencrypt.org/directory
-    #     email: vince9p+acme@pm.me
-    #     ovhEndpointName: ovh-eu
-    #     ovhAuthenticationRef:
-    #       applicationKeyRef:
-    #         name: ovh-credentials
-    #         key: applicationKey
-    #       applicationSecretRef:
-    #         name: ovh-credentials
-    #         key: applicationSecret
-    #       consumerKeyRef:
-    #         name: ovh-credentials
-    #         key: consumerKey
-    #   - name: le-staging
-    #     create: true
-    #     kind: ClusterIssuer
-    #     namespace: default
-    #     cnameStrategy: None
-    #     acmeServerUrl: https://acme-staging-v02.api.letsencrypt.org/directory
-    #     email: vince9p+acme@pm.me
-    #     ovhEndpointName: ovh-eu
-    #     ovhAuthenticationRef:
-    #       applicationKeyRef:
-    #         name: ovh-credentials
-    #         key: applicationKey
-    #       applicationSecretRef:
-    #         name: ovh-credentials
-    #         key: applicationSecret
-    #       consumerKeyRef:
-    #         name: ovh-credentials
-    #         key: consumerKey
+    issuers:
+      - name: le-prod
+        create: true
+        kind: ClusterIssuer
+        namespace: default
+        cnameStrategy: None
+        acmeServerUrl: https://acme-v02.api.letsencrypt.org/directory
+        email: vince9p+acme@pm.me
+        ovhEndpointName: ovh-eu
+        ovhAuthenticationRef:
+          applicationKeyRef:
+            name: ovh-credentials
+            key: applicationKey
+          applicationSecretRef:
+            name: ovh-credentials
+            key: applicationSecret
+          consumerKeyRef:
+            name: ovh-credentials
+            key: consumerKey
+      - name: le-staging
+        create: true
+        kind: ClusterIssuer
+        namespace: default
+        cnameStrategy: None
+        acmeServerUrl: https://acme-staging-v02.api.letsencrypt.org/directory
+        email: vince9p+acme@pm.me
+        ovhEndpointName: ovh-eu
+        ovhAuthenticationRef:
+          applicationKeyRef:
+            name: ovh-credentials
+            key: applicationKey
+          applicationSecretRef:
+            name: ovh-credentials
+            key: applicationSecret
+          consumerKeyRef:
+            name: ovh-credentials
+            key: consumerKey

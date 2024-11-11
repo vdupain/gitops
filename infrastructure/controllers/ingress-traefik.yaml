@@ -25,7 +25,7 @@ spec:
   chart:
     spec:
       chart: traefik
-      version: 32.1.1
+      version: 33.0.0
       sourceRef:
         kind: HelmRepository
         name: traefik
@@ -36,7 +36,7 @@ spec:
   values:
     deployment:
       kind: Deployment
-      replicas: 1
+      replicas: 2
     providers:
       kubernetesIngress:
         publishedService:

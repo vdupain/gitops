@@ -43,28 +43,28 @@ spec:
   path: ./infrastructure/controllers
   prune: true
   wait: true
-  patches:
-    - patch: |
-        - op: replace
-          path: /spec/values/service/annotations/io.cilium~1lb-ipam-ips
-          value: 192.168.10.215
-      target:
-        kind: HelmRelease
-        name: coredns
-    - patch: |
-        - op: replace
-          path: /spec/values/controller/service/annotations/io.cilium~1lb-ipam-ips
-          value: 192.168.10.217
-      target:
-        kind: HelmRelease
-        name: ingress-nginx
-    - patch: |
-        - op: replace
-          path: /spec/values/service/annotations/io.cilium~1lb-ipam-ips
-          value: 192.168.10.216
-      target:
-        kind: HelmRelease
-        name: traefik
+  # patches:
+  #   - patch: |
+  #       - op: replace
+  #         path: /spec/values/service/annotations/io.cilium~1lb-ipam-ips
+  #         value: 192.168.10.215
+  #     target:
+  #       kind: HelmRelease
+  #       name: coredns
+  #   - patch: |
+  #       - op: replace
+  #         path: /spec/values/controller/service/annotations/io.cilium~1lb-ipam-ips
+  #         value: 192.168.10.217
+  #     target:
+  #       kind: HelmRelease
+  #       name: ingress-nginx
+  #   - patch: |
+  #       - op: replace
+  #         path: /spec/values/service/annotations/io.cilium~1lb-ipam-ips
+  #         value: 192.168.10.216
+  #     target:
+  #       kind: HelmRelease
+  #       name: traefik
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization

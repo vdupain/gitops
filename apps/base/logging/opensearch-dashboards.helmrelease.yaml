@@ -28,6 +28,9 @@ spec:
         - host: logging.k8s.vincentdupain.com
           paths:
             - path: /
+              backend:
+                serviceName: ""
+                servicePort: ""
       tls:
         - secretName: logging-tls
           hosts:

@@ -32,7 +32,7 @@ spec:
                 serviceName: "opensearch-dashboards"
                 servicePort: "http"
       tls:
-        - secretName: logging-tls
+        - secretName: opensearch-dashboards-tls
           hosts:
            - logging.k8s.vincentdupain.com
 

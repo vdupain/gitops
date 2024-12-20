@@ -9,7 +9,7 @@ data:
   vm_name: "rocky"
   vm_hostname: "rocky"
   vm_socket_number: "1"
-  vm_datastore_id: "local-lvm"
+  vm_datastore_id: "local-zfs"
   vm_ip_offset: "50"
 kind: ConfigMap
 metadata:

@@ -10,3 +10,4 @@ resources:
 #- local-path-storage.yaml
 - sealed-secrets.yaml
 - sealed-secrets-web.yaml
+- zfs-localpv.yaml

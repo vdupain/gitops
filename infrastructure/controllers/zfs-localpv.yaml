@@ -4,6 +4,7 @@ kind: Namespace
 metadata:
   name: zfs-system
   labels:
+    pod-security.kubernetes.io/enforce: privileged
     vector.dev/exclude: "true"
 ---
 apiVersion: source.toolkit.fluxcd.io/v1
@@ -28,11 +29,13 @@ spec:
       version: 2.7.0-develop
       sourceRef:
         kind: HelmRepository
-        name: zfs-system
+        name: zfs-localpv
         namespace: flux-system
       interval: 12h
   releaseName: zfs-localpv
 
   values:
     zfsNode:
+      # par défaut clés de chiffrement utilisées par ZFS dans /home, qui est immutable dans Talos
+      # configuration vers un autre répertoire (même si on n'utilise pas les fonctionalités de chiffrement de ZFS)
       encrKeysDir: /var/zfsencrkeys

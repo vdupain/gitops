@@ -40,4 +40,4 @@ spec:
       rbac:
         create: false
     persistence:
-      enabled: false
+      enabled: true

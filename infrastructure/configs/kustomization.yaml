@@ -5,4 +5,5 @@ resources:
 #- cluster-issuers.yaml
 - namespaces.yaml
 - ovh-credentials.sealedsecret.yaml
+- storageclass.yaml
 

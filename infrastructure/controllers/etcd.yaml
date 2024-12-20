@@ -39,3 +39,5 @@ spec:
     auth:
       rbac:
         create: false
+    persistence:
+      enabled: false

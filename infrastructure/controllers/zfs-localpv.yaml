@@ -39,3 +39,20 @@ spec:
       # par défaut clés de chiffrement utilisées par ZFS dans /home, qui est immutable dans Talos
       # configuration vers un autre répertoire (même si on n'utilise pas les fonctionalités de chiffrement de ZFS)
       encrKeysDir: /var/zfsencrkeys
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+   name: zfs
+   annotations:
+    storageclass.kubernetes.io/is-default-class: "true"
+allowVolumeExpansion: true
+parameters:
+  compression: "off"
+  dedup: "off"
+  fstype: zfs
+  poolname: zfspv-pool
+  recordsize: 128k
+provisioner: zfs.csi.openebs.io
+reclaimPolicy: Delete
+volumeBindingMode: WaitForFirstConsumer

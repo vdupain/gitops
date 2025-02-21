@@ -40,7 +40,6 @@ spec:
     substitute:
       corednsServiceAnnotationCiliumLBIPAddrMgmt: "192.168.10.215"
       traefikServiceAnnotationCiliumLBIPAddrMgmt: "192.168.10.216"
-      nginxServiceAnnotationCiliumLBIPAddrMgmt: "192.168.10.217"
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization

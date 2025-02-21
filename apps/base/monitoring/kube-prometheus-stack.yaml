@@ -45,6 +45,10 @@ spec:
         hosts:
           - ${prometheusIngressHost:prometheus.k8s.vincentdupain.com}
         path: /
+        tls:
+          - secretName: prometheus-dashboards-tls
+            hosts:
+            - ${prometheusIngressHost:grafana.k8s.vincentdupain.com}
     grafana:
       enabled: true
       ingress:
@@ -52,3 +56,7 @@ spec:
         hosts:
           - ${grafanaIngressHost:grafana.k8s.vincentdupain.com}
         path: /
+        tls:
+          - secretName: grafana-dashboards-tls
+            hosts:
+            - ${grafanaIngressHost:grafana.k8s.vincentdupain.com}

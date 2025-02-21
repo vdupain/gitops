@@ -43,12 +43,12 @@ spec:
       ingress:
         enabled: true
         hosts:
-          - prometheus.k8s
+          - ${prometheusIngressHost:prometheus.k8s.vincentdupain.com}
         path: /
     grafana:
       enabled: true
       ingress:
         enabled: true
         hosts:
-          - grafana.k8s
+          - ${grafanaIngressHost:grafana.k8s.vincentdupain.com}
         path: /

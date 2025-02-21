@@ -34,5 +34,5 @@ spec:
       tls:
         - secretName: opensearch-dashboards-tls
           hosts:
-           - ${opensearchIngressHost:logging.k8s.vincentdupain.com}
+            - ${opensearchIngressHost:logging.k8s.vincentdupain.com}
 

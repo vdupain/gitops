@@ -20,3 +20,4 @@ spec:
       prometheusIngressHost: "prometheus.staging.k8s.vincentdupain.com"
       grafanaIngressHost: "grafana.staging.k8s.vincentdupain.com"
       opensearchIngressHost: "logging.staging.k8s.vincentdupain.com"
+      podinfoIngressHost: "podinfo.staging.k8s.vincentdupain.com"

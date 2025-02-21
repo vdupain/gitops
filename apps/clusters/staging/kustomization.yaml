@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - ../../base/monitoring
   - ../../base/logging
+  - ../../base/podinfo

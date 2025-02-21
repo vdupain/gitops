@@ -41,4 +41,4 @@ spec:
         type: LoadBalancer
         externalTrafficPolicy: Local
         annotations:
-          io.cilium/lb-ipam-ips: 192.168.10.227
+          io.cilium/lb-ipam-ips: ${nginxServiceAnnotationCiliumLBIPAddrMgmt:=192.168.10.227}

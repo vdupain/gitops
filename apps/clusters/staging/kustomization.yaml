@@ -4,3 +4,4 @@ resources:
   - ../../base/monitoring
   - ../../base/logging
   - ../../base/podinfo
+  - ../../base/ai/open-webui

@@ -38,6 +38,9 @@ spec:
     alertmanager:
       enabled: false
     prometheus:
+      persistence:
+        enabled: true
+        size: 5Gi
       prometheusSpec:
         serviceMonitorSelectorNilUsesHelmValues: false
       ingress:

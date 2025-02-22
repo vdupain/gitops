@@ -40,8 +40,13 @@ spec:
     prometheus:
       prometheusSpec:
         serviceMonitorSelectorNilUsesHelmValues: false
-        persistence:
-          enable: true
+        volumeClaimTemplate:
+          spec:
+            storageClassName: zfs
+            accessModes: ["ReadWriteOnce"]
+            resources:
+              requests:
+                storage: 5Gi
       ingress:
         enabled: true
         annotations:

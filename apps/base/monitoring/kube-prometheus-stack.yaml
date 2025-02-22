@@ -40,11 +40,11 @@ spec:
     prometheus:
       prometheusSpec:
         serviceMonitorSelectorNilUsesHelmValues: false
+        persistence:
+          enable: true
       ingress:
         enabled: true
         annotations:
-          traefik.ingress.kubernetes.io/router.entrypoints: websecure
-          traefik.ingress.kubernetes.io/router.tls: "true"
           cert-manager.io/cluster-issuer: le-prod
         hosts:
           - ${prometheusIngressHost:prometheus.k8s.vincentdupain.com}
@@ -58,8 +58,6 @@ spec:
       ingress:
         enabled: true
         annotations:
-          traefik.ingress.kubernetes.io/router.entrypoints: websecure
-          traefik.ingress.kubernetes.io/router.tls: "true"
           cert-manager.io/cluster-issuer: le-prod
         hosts:
           - ${grafanaIngressHost:grafana.k8s.vincentdupain.com}

@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: prometheus-blackbox-exporter
-      version: 8.16.0
+      version: 9.2.0
       sourceRef:
         kind: HelmRepository
         name: prometheus-community
@@ -40,5 +40,5 @@ spec:
         scrapeTimeout: 30s
         module: http_2xx          
       targets:
-        - name: google
-          url: https://www.google.com/
+        - name: podinfo
+          url: https://${podinfoIngressHost:podinfo.k8s.vincentdupain.com}

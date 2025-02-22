@@ -17,6 +17,7 @@ spec:
   releaseName: opensearch
 
   values:
+    replicas: 1
     extraEnvs:
       - name: OPENSEARCH_INITIAL_ADMIN_PASSWORD
         value: myStrongPassword123@456

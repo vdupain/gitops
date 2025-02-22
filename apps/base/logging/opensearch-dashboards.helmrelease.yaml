@@ -27,12 +27,12 @@ spec:
       hosts:
         - host: ${opensearchIngressHost:logging.k8s.vincentdupain.com}
           paths:
-            - path: /
+            - pafth: /
               backend:
-                serviceName: "opensearch-dashboards"
-                servicePort: "http"
-      # tls:
-      #   - secretName: opensearch-dashboards-tls
-      #     hosts:
-      #       - ${opensearchIngressHost:logging.k8s.vincentdupain.com}
+                serviceName: ""
+                servicePort: ""
+      tls:
+        - secretName: opensearch-dashboards-tls
+          hosts:
+            - ${opensearchIngressHost:logging.k8s.vincentdupain.com}
 

@@ -38,11 +38,16 @@ spec:
     alertmanager:
       enabled: false
     prometheus:
-      persistence:
-        enabled: true
-        size: 5Gi
       prometheusSpec:
         serviceMonitorSelectorNilUsesHelmValues: false
+        storageSpec:
+          volumeClaimTemplate:
+            spec:
+              storageClassName: zfs
+              accessModes: ["ReadWriteOnce"]
+              resources:
+                requests:
+                  storage: 5Gi
       ingress:
         enabled: true
         annotations:

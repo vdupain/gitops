@@ -3,3 +3,5 @@ kind: Kustomization
 resources:
 - blackbox.helmrelease.yaml
 - kube-prometheus-stack.yaml
+- scaphandre.service.yaml
+- scaphandre.servicemonitor.yaml

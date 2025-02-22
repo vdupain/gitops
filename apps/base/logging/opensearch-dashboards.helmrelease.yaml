@@ -27,7 +27,7 @@ spec:
       hosts:
         - host: ${opensearchIngressHost:logging.k8s.vincentdupain.com}
           paths:
-            - pafth: /
+            - path: /
               backend:
                 serviceName: opensearch-dashboards
                 servicePort: http

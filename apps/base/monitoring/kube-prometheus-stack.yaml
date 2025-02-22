@@ -39,7 +39,7 @@ spec:
       enabled: true
       upgradeJob:
         enabled: true
-        forceConflicts: false
+        forceConflicts: true
     alertmanager:
       enabled: false
     prometheus:

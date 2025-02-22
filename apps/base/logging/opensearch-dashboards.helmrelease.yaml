@@ -28,7 +28,7 @@ spec:
             - path: /
               backend:
                 serviceName: "opensearch-dashboards"
-                servicePort: "5601"
+                servicePort: "http"
       tls:
         - secretName: opensearch-dashboards-tls
           hosts:

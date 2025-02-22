@@ -23,3 +23,4 @@ spec:
       podinfoIngressHost: "podinfo.staging.k8s.vincentdupain.com"
       openwebuiIngressHost: "open-webui.staging.k8s.vincentdupain.com"
       ollamaIngressHost: "ollama.staging.k8s.vincentdupain.com"
+      flowiseIngressHost: "flowise.staging.k8s.vincentdupain.com"

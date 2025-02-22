@@ -5,3 +5,4 @@ resources:
   - ../../base/logging
   - ../../base/podinfo
   - ../../base/ai/open-webui
+  - ../../base/ai/flowise

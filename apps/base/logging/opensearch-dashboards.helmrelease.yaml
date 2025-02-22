@@ -11,7 +11,7 @@ spec:
         kind: HelmRepository
         name: opensearch
         namespace: flux-system
-      version: 2.27.1
+      version: 2.24.1
   interval: 15m
   timeout: 5m
   releaseName: opensearch-dashboards

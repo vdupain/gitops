@@ -40,13 +40,6 @@ spec:
     prometheus:
       prometheusSpec:
         serviceMonitorSelectorNilUsesHelmValues: false
-        storageSpec:
-          volumeClaimTemplate:
-            spec:
-              accessModes: [“ReadWriteOnce”]
-              resources:
-                requests:
-                  storage: 5Gi
       ingress:
         enabled: true
         annotations:
@@ -60,6 +53,9 @@ spec:
             - ${prometheusIngressHost:prometheus.k8s.vincentdupain.com}
     grafana:
       enabled: true
+      persistence:
+        enabled: true
+        size: 1Gi
       ingress:
         enabled: true
         annotations:

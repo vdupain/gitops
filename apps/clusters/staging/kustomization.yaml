@@ -6,3 +6,4 @@ resources:
   - ../../base/podinfo
   - ../../base/ai/open-webui
   - ../../base/ai/flowise
+  - ../../base/n8n

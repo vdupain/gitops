@@ -42,6 +42,10 @@ spec:
         forceConflicts: true
     alertmanager:
       enabled: true
+      alertmanagerSpec:
+        alertmanagerConfigSelector:
+          matchLabels:
+            alertmanager: config
       ingress:
         enabled: true
         annotations:

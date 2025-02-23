@@ -19,6 +19,7 @@ spec:
     substitute:
       prometheusIngressHost: "prometheus.staging.k8s.vincentdupain.com"
       grafanaIngressHost: "grafana.staging.k8s.vincentdupain.com"
+      alertmanagerIngressHost: "alertmanager.staging.k8s.vincentdupain.com"
       opensearchIngressHost: "logging.staging.k8s.vincentdupain.com"
       podinfoIngressHost: "podinfo.staging.k8s.vincentdupain.com"
       openwebuiIngressHost: "open-webui.staging.k8s.vincentdupain.com"

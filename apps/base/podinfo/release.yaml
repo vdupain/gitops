@@ -29,6 +29,6 @@ spec:
             - path: /
               pathType: ImplementationSpecific
       tls:
-        - secretName: podinfo-service-tls
+        - secretName: podinfo-tls
           hosts:
             - ${podinfoIngressHost:podinfo.k8s.vincentdupain.com}

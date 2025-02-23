@@ -42,7 +42,17 @@ spec:
         forceConflicts: true
     alertmanager:
       enabled: true
-
+      ingress:
+        enabled: true
+        annotations:
+          cert-manager.io/cluster-issuer: le-prod
+        hosts:
+          - ${alertmanagerIngressHost:alertmanager.k8s.vincentdupain.com}
+        path: /
+        tls:
+          - secretName: alertmanager-tls
+            hosts:
+            - ${alertmanagerIngressHost:alertmanager.k8s.vincentdupain.com}
     prometheus:
       prometheusSpec:
         serviceMonitorSelectorNilUsesHelmValues: false
@@ -62,7 +72,7 @@ spec:
           - ${prometheusIngressHost:prometheus.k8s.vincentdupain.com}
         path: /
         tls:
-          - secretName: prometheus-dashboards-tls
+          - secretName: prometheus-tls
             hosts:
             - ${prometheusIngressHost:prometheus.k8s.vincentdupain.com}
     grafana:
@@ -82,6 +92,6 @@ spec:
           - ${grafanaIngressHost:grafana.k8s.vincentdupain.com}
         path: /
         tls:
-          - secretName: grafana-dashboards-tls
+          - secretName: grafana-tls
             hosts:
             - ${grafanaIngressHost:grafana.k8s.vincentdupain.com}

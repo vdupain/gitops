@@ -1,0 +1,28 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: apps
+  namespace: flux-system
+spec:
+  interval: 10m0s
+  timeout: 5m0s
+  dependsOn:
+    - name: infra-configs
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./apps/clusters/prod
+  prune: true
+  wait: true
+  postBuild:
+    substitute:
+      # prometheusIngressHost: "prometheus.staging.k8s.vincentdupain.com"
+      # grafanaIngressHost: "grafana.staging.k8s.vincentdupain.com"
+      # alertmanagerIngressHost: "alertmanager.staging.k8s.vincentdupain.com"
+      # opensearchIngressHost: "logging.staging.k8s.vincentdupain.com"
+      podinfoIngressHost: "podinfo.homelab.vincentdupain.com"
+      # openwebuiIngressHost: "open-webui.staging.k8s.vincentdupain.com"
+      # ollamaIngressHost: "ollama.staging.k8s.vincentdupain.com"
+      # flowiseIngressHost: "flowise.staging.k8s.vincentdupain.com"
+      # n8nIngressHost: "n8n.staging.k8s.vincentdupain.com"

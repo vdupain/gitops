@@ -8,3 +8,4 @@ data:
   ciliumLoadBalancerIPPoolBlockStop: "192.168.10.215"
   corednsServiceAnnotationCiliumLBIPAddrMgmt: "192.168.10.210"
   traefikServiceAnnotationCiliumLBIPAddrMgmt: "192.168.10.211"
+  externalDnsDomainFilter: "homelab.vincentdupain.com"

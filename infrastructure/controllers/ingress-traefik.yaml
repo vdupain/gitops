@@ -45,5 +45,5 @@ spec:
       enabled: true
       type: LoadBalancer
       annotations:
-        io.cilium/lb-ipam-ips: ${traefikServiceAnnotationCiliumLBIPAddrMgmt:=192.168.10.226}
+        io.cilium/lb-ipam-ips: ${traefikServiceAnnotationCiliumLBIPAddrMgmt}
 

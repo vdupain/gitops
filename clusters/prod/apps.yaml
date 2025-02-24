@@ -16,13 +16,7 @@ spec:
   prune: true
   wait: true
   postBuild:
-    substitute:
-      # prometheusIngressHost: "prometheus.staging.k8s.vincentdupain.com"
-      # grafanaIngressHost: "grafana.staging.k8s.vincentdupain.com"
-      # alertmanagerIngressHost: "alertmanager.staging.k8s.vincentdupain.com"
-      # opensearchIngressHost: "logging.staging.k8s.vincentdupain.com"
-      podinfoIngressHost: "podinfo.homelab.vincentdupain.com"
-      # openwebuiIngressHost: "open-webui.staging.k8s.vincentdupain.com"
-      # ollamaIngressHost: "ollama.staging.k8s.vincentdupain.com"
-      # flowiseIngressHost: "flowise.staging.k8s.vincentdupain.com"
-      # n8nIngressHost: "n8n.staging.k8s.vincentdupain.com"
+    substituteFrom:
+      - kind: ConfigMap
+        name: apps-vars
+        optional: false

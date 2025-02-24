@@ -38,11 +38,11 @@ spec:
       annotations:
         cert-manager.io/cluster-issuer: le-prod
       hosts:
-         - host: ${flowiseIngressHost:flowise.k8s.vincentdupain.com}
+         - host: ${flowiseIngressHost}
            paths:
              - /
       tls:
         - secretName: flowise-tls
           hosts:
-            - ${flowiseIngressHost:flowise.k8s.vincentdupain.com}
+            - ${flowiseIngressHost}
 

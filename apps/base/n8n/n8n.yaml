@@ -36,12 +36,12 @@ spec:
       annotations:
         cert-manager.io/cluster-issuer: le-prod
       hosts:
-        - host: ${n8nIngressHost:n8n.k8s.vincentdupain.com}
+        - host: ${n8nIngressHost}
           paths:
             - path: /
               pathType: ImplementationSpecific
       tls:
         - secretName: n8n-tls
           hosts:
-            -  ${n8nIngressHost:n8n.k8s.vincentdupain.com}
+            -  ${n8nIngressHost}
 

@@ -24,11 +24,11 @@ spec:
         traefik.ingress.kubernetes.io/router.tls: "true"
         cert-manager.io/cluster-issuer: le-prod
       hosts:
-        - host: ${podinfoIngressHost:podinfo.k8s.vincentdupain.com}
+        - host: ${podinfoIngressHost}
           paths:
             - path: /
               pathType: ImplementationSpecific
       tls:
         - secretName: podinfo-tls
           hosts:
-            - ${podinfoIngressHost:podinfo.k8s.vincentdupain.com}
+            - ${podinfoIngressHost}

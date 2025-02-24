@@ -41,4 +41,4 @@ spec:
         module: http_2xx          
       targets:
         - name: podinfo
-          url: https://${podinfoIngressHost:podinfo.k8s.vincentdupain.com}
+          url: https://${podinfoIngressHost}

@@ -35,7 +35,7 @@ spec:
       enabled: true
       annotations:
         cert-manager.io/cluster-issuer: le-prod
-      host: ${openwebuiIngressHost:open-webui.k8s.vincentdupain.com}
+      host: ${openwebuiIngressHost}
       tls: true
       existingSecret: open-webui-tls
     ollama:
@@ -53,14 +53,14 @@ spec:
         annotations:
           cert-manager.io/cluster-issuer: le-prod
         hosts:
-          - host: ${ollamaIngressHost:ollama.k8s.vincentdupain.com}
+          - host: ${ollamaIngressHost}
             paths:
               - path: /
                 pathType: Prefix
         tls:
           - secretName: ollama-tls
             hosts:
-            - ${ollamaIngressHost:ollama.k8s.vincentdupain.com}
+            - ${ollamaIngressHost}
 
 
 

@@ -7,6 +7,7 @@ resources:
 - external-dns.yaml
 #- ingress-nginx.yaml
 - ingress-traefik.yaml
+- kube-prometheus-stack.yaml
 #- local-path-storage.yaml
 - sealed-secrets.yaml
 - sealed-secrets-web.yaml

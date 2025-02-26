@@ -5,6 +5,6 @@ resources:
 #  - ../../base/logging
   - ../../base/postgresql
   - ../../base/podinfo
-  - ../../base/ai/open-webui
+#  - ../../base/ai/open-webui
   - ../../base/ai/flowise
   - ../../base/n8n

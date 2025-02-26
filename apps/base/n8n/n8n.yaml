@@ -31,6 +31,11 @@ spec:
       interval: 12h
 
   values:
+    db:
+      type: postgresdb
+    postgresql:
+      enabled: true
+        
     ingress:
       enabled: true
       annotations:

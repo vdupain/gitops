@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
   - ../../base/podinfo
   - ../../base/monitoring
+  - ../../base/postgresql
   - ../../base/ai/open-webui
   - ../../base/ai/flowise
   - ../../base/n8n

@@ -12,3 +12,4 @@ data:
   prometheusIngressHost: "prometheus.homelab.vincentdupain.com"
   grafanaIngressHost: "grafana.homelab.vincentdupain.com"
   alertmanagerIngressHost: "alertmanager.homelab.vincentdupain.com"
+  sealedSecretsIngressHost: "sealedsecrets.homelab.vincentdupain.com"

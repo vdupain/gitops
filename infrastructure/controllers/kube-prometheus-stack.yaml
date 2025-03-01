@@ -50,6 +50,9 @@ spec:
         enabled: true
         annotations:
           cert-manager.io/cluster-issuer: le-prod
+          gethomepage.dev/enabled: "true"
+          gethomepage.dev/name: "Alertmanager"
+          gethomepage.dev/group: "Observability"
         hosts:
           - ${alertmanagerIngressHost}
         path: /
@@ -72,6 +75,9 @@ spec:
         enabled: true
         annotations:
           cert-manager.io/cluster-issuer: le-prod
+          gethomepage.dev/enabled: "true"
+          gethomepage.dev/name: "Prometheus"
+          gethomepage.dev/group: "Observability"
         hosts:
           - ${prometheusIngressHost}
         path: /
@@ -92,6 +98,9 @@ spec:
         enabled: true
         annotations:
           cert-manager.io/cluster-issuer: le-prod
+          gethomepage.dev/enabled: "true"
+          gethomepage.dev/name: "Grafana"
+          gethomepage.dev/group: "Observability"
         hosts:
           - ${grafanaIngressHost}
         path: /

@@ -1,0 +1,19 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: opensearch-master
+  namespace: logging
+spec:
+  endpoints:
+  - interval: 30s
+    path: /_prometheus/metrics
+    port: http-metrics
+    scrapeTimeout: 10s
+  namespaceSelector:
+    matchNames:
+    - logging
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: master
+      app.kubernetes.io/instance: opensearch
+      app.kubernetes.io/name: opensearch

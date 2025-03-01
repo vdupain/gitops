@@ -31,8 +31,7 @@ spec:
       metrics:
         enabled: true
         serviceMonitor:
-          enabled: true
-          jobLabel: opensearch
+          enabled: false
     dashboards:
       enabled: true
       ingress:

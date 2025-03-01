@@ -23,6 +23,8 @@ spec:
         traefik.ingress.kubernetes.io/router.entrypoints: websecure
         traefik.ingress.kubernetes.io/router.tls: "true"
         cert-manager.io/cluster-issuer: le-prod
+        gethomepage.dev/enabled: "true"
+        gethomepage.dev/name: "Podinfo"          
       hosts:
         - host: ${podinfoIngressHost}
           paths:

@@ -2,6 +2,4 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: podinfo
-  labels:
-    vector.dev/exclude: "false"
 

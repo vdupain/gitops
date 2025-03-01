@@ -37,6 +37,9 @@ spec:
       enabled: true
       annotations:
         cert-manager.io/cluster-issuer: le-prod
+        gethomepage.dev/enabled: "true"
+        gethomepage.dev/name: "Flowise"
+        gethomepage.dev/group: "Apps"
       hosts:
          - host: ${flowiseIngressHost}
            paths:

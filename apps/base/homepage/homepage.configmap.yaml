@@ -1,0 +1,36 @@
+---
+kind: ConfigMap
+metadata:
+  name: homepage-config
+  namespace: homepage
+apiVersion: v1
+data:
+  bookmarks.yaml: |
+    - Developer:
+      - Github:
+        - abbr: GH
+          href: https://github.com/
+  docker.yaml: ""
+  kubernetes.yaml: |
+    mode: cluster
+  services.yaml: |
+    - Observability
+    - Tooling
+    - Apps
+  settings.yaml: ""
+  widgets.yaml: |
+    - kubernetes:
+        cluster:
+          cpu: true
+          label: cluster
+          memory: true
+          show: true
+          showLabel: true
+        nodes:
+          cpu: true
+          memory: true
+          show: true
+          showLabel: true
+    - search:
+        provider: google
+        target: _blank

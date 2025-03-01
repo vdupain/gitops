@@ -22,11 +22,11 @@ spec:
               mountPath: /scripts
           env:
             - name: OPENSEARCH_SERVER
-              value: https://opensearch-cluster-master:9200
+              value: http://opensearch.logging:9200
             - name: OPENSEARCH_USER
               value: admin
             - name: OPENSEARCH_PASSWORD
-              value: myStrongPassword123@456
+              value: admin
           command:
             - /scripts/opensearch-post-config-job.sh
       restartPolicy: OnFailure

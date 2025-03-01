@@ -6,7 +6,8 @@ metadata:
 data:
   opensearch-post-config-job.sh: |-
     #!/bin/env sh
-    curl -k -v -L -XPUT -u "$OPENSEARCH_USER:$OPENSEARCH_PASSWORD" "$OPENSEARCH_SERVER/_index_template/logs_template" -H 'Content-Type: application/json' -d'
+    # curl -k -v -L -XPUT -u "$OPENSEARCH_USER:$OPENSEARCH_PASSWORD" "$OPENSEARCH_SERVER/_index_template/logs_template" -H 'Content-Type: application/json' -d'
+    curl -k -v -L -XPUT "$OPENSEARCH_SERVER/_index_template/logs_template" -H 'Content-Type: application/json' -d'
     {
       "index_patterns": [
         "logs-*"
@@ -25,7 +26,8 @@ data:
       }
     }'
 
-    curl -k -v -L -XPUT -u "$OPENSEARCH_USER:$OPENSEARCH_PASSWORD" "$OPENSEARCH_SERVER/_index_template/auditlogs_template" -H 'Content-Type: application/json' -d'
+    # curl -k -v -L -XPUT -u "$OPENSEARCH_USER:$OPENSEARCH_PASSWORD" "$OPENSEARCH_SERVER/_index_template/auditlogs_template" -H 'Content-Type: application/json' -d'
+    curl -k -v -L -XPUT "$OPENSEARCH_SERVER/_index_template/auditlogs_template" -H 'Content-Type: application/json' -d'
     {
       "index_patterns": [
         "auditlogs-*"
@@ -44,7 +46,8 @@ data:
       }
     }'
 
-    curl -k -v -L -XPUT -u "$OPENSEARCH_USER:$OPENSEARCH_PASSWORD" "$OPENSEARCH_SERVER/_plugins/_ism/policies/default_datastream_policy" -H 'Content-Type: application/json' -d'
+    # curl -k -v -L -XPUT -u "$OPENSEARCH_USER:$OPENSEARCH_PASSWORD" "$OPENSEARCH_SERVER/_plugins/_ism/policies/default_datastream_policy" -H 'Content-Type: application/json' -d'
+    curl -k -v -L -XPUT "$OPENSEARCH_SERVER/_plugins/_ism/policies/default_datastream_policy" -H 'Content-Type: application/json' -d'
     {
       "policy": {
         "description": "logs datastream policy",

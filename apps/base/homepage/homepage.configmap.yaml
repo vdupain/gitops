@@ -14,9 +14,17 @@ data:
   kubernetes.yaml: |
     mode: cluster
   services.yaml: |
-    - Observability
-    - Tooling
-    - Apps
+    # - Observability:
+    #   - Prometheus:
+    #       widget:
+    #         type: prometheus
+    #         url: http://prometheus-operated.monitoring:9090
+    #   - Grafana:
+    #       widget:
+    #         type: grafana
+    #         url: http://prometheus-grafana.monitoring
+    #         username: admin
+    #         password: prom-operator
   settings.yaml: ""
   widgets.yaml: |
     - kubernetes:

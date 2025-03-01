@@ -4,6 +4,7 @@ resources:
 - logging.namespace.yaml
 - opensearch.helmrelease.yaml
 - opensearch.helmrepo.yaml
+- opensearch.servicemonitor.yaml
 - post-config.configmap.yaml
 - post-config.job.yaml
 - vector.yaml

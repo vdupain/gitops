@@ -28,6 +28,10 @@ spec:
       masterOnly: false
       persistence:
         size: 2Gi
+      metrics:
+        enabled: true
+        serviceMonitor:
+          enabled: true
     dashboards:
       enabled: true
       ingress:

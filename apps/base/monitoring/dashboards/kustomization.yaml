@@ -1,13 +1,16 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: monitoring
 
 generatorOptions:
   disableNameSuffixHash: true
   labels:
     grafana_dashboard: "1"
-  
+namespace: monitoring
+
 configMapGenerator:
-- files:
-  - scaphandre.json
-  name: grafana-dashboard-scaphandre
+
+- name: grafana-dashboard-scaphandre
+  files: [ scaphandre.json]
+  options:
+    annotations:
+      grafana_folder: "System"

@@ -4,6 +4,7 @@ metadata:
   name: infra-vars
   namespace: flux-system
 data:
+  clusterName: "prod"
   ciliumLoadBalancerIPPoolBlockStart: "192.168.10.210"
   ciliumLoadBalancerIPPoolBlockStop: "192.168.10.215"
   corednsServiceAnnotationCiliumLBIPAddrMgmt: "192.168.10.210"

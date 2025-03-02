@@ -63,6 +63,7 @@ spec:
             - ${alertmanagerIngressHost}
     prometheus:
       prometheusSpec:
+        externalLabels: ${clusterName}
         serviceMonitorSelectorNilUsesHelmValues: false
         storageSpec:
           volumeClaimTemplate:

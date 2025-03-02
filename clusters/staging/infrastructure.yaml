@@ -38,6 +38,7 @@ spec:
   wait: true
   postBuild:
     substitute:
+      clusterName: "staging"
       corednsServiceAnnotationCiliumLBIPAddrMgmt: "192.168.10.215"
       traefikServiceAnnotationCiliumLBIPAddrMgmt: "192.168.10.216"
       externalDnsDomainFilter: "staging.k8s.vincentdupain.com"

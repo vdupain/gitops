@@ -31,13 +31,16 @@ spec:
       interval: 12h
 
   values:
+    extraEnvVars:
+      - name: FLOWISE_FILE_SIZE_LIMIT
+        value: "200mb"
     persistence:
       enabled: true
     ingress:
       enabled: true
       annotations:
         traefik.ingress.kubernetes.io/buffering: |
-          maxrequestbodybytes: 500000000
+          maxrequestbodybytes: 200000000
         cert-manager.io/cluster-issuer: le-prod
         gethomepage.dev/enabled: "true"
         gethomepage.dev/name: "Flowise"

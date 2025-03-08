@@ -11,3 +11,4 @@ data:
   opensearchIngressHost: "logging.homelab.vincentdupain.com"
   openwebuiIngressHost: "open-webui.homelab.vincentdupain.com"
   podinfoIngressHost: "podinfo.homelab.vincentdupain.com"
+  qdrantIngressHost: "qdrant.homelab.vincentdupain.com"

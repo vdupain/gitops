@@ -24,3 +24,4 @@ spec:
       opensearchIngressHost: "logging.staging.k8s.vincentdupain.com"
       openwebuiIngressHost: "open-webui.staging.k8s.vincentdupain.com"
       podinfoIngressHost: "podinfo.staging.k8s.vincentdupain.com"
+      qdrantIngressHost: "qdrant.staging.k8s.vincentdupain.com"

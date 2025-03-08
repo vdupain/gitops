@@ -36,6 +36,8 @@ spec:
     ingress:
       enabled: true
       annotations:
+        traefik.ingress.kubernetes.io/buffering: |
+          maxrequestbodybytes: 500000000
         cert-manager.io/cluster-issuer: le-prod
         gethomepage.dev/enabled: "true"
         gethomepage.dev/name: "Flowise"
